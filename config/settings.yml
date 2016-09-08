@@ -1,0 +1,9 @@
+plugins:
+  enable_oss_uploads:
+    default: false
+    client: true
+  oss_access_key_id: ''
+  oss_access_key_secret: ''
+  oss_cdn_url: ''
+  oss_region: oss-cn-shenzhen
+  oss_upload_bucket: discourseprod

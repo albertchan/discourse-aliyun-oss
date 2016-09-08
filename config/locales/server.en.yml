@@ -1,0 +1,8 @@
+en:
+  site_settings:
+    enable_oss_uploads: "Place uploads on Aliyun OSS storage. If you change this, you will need to restart your server. IMPORTANT: requires valid OSS credentials (both access key id & access key secret)."
+    oss_cdn_url: "Currently not supported so please leave this blank."
+    oss_access_key_id: "Your OSS access key id"
+    oss_access_key_secret: "Your OSS access key secret"
+    oss_region: "The region code of your OSS bucket, e.g. \"oss-cn-shenzhen\""
+    oss_upload_bucket: "The name of the OSS bucket which will be used to store your uploads."

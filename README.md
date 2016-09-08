@@ -10,7 +10,7 @@ A Discourse plugin for uploading to static assets to Aliyun's OSS.
 ```
 run:
   - exec: echo "Beginning of custom commands"
-  - exec: gem install
+  - exec: gem install aliyun-sdk
 ```
 
 * Edit your web template and add the project clone url:

@@ -3,20 +3,24 @@ discourse-aliyun-oss
 
 A Discourse plugin for uploading to static assets to Aliyun's OSS.
 
+_Warning_: This plugin is still experimental so try it in development mode
+before doing anything serious with it!
+
 ## Installation
 
-* Edit your web template and install the gem dependency:
-
-```
-run:
-  - exec: echo "Beginning of custom commands"
-  - exec: gem install aliyun-sdk
-```
-
-* Edit your web template and add the project clone url:
+* Edit your web template by adding the gem dependency and the project clone url:
 
 ```
 hooks:
+  before_bundle_exec:
+    - exec:
+        cd: $home
+        cmd:
+          - echo "gem 'aliyun-sdk', require:'aliyun/oss'" >> Gemfile
+          - su discourse -c 'bundle install --no-deployment --verbose --without test --without development --path vendor/bundle'
+
+  ...
+
   after_code:
     - exec:
         cd: $home/plugins
@@ -39,9 +43,7 @@ How to use:
 * SSH into your server
 * `cd /var/discourse`
 * `./launcher enter app`
-* `cd plugins/discourse-aliyun-oss/lib/tasks`
-* `rake uploads:migrate_from_s3_to_oss`
-* `rake posts:rebake`
+* `cd /var/www/discourse && su discourse -c 'bundle exec rake uploads:migrate_from_s3_to_oss'`
 
 ## Contributing
 

@@ -5,4 +5,5 @@ en:
     oss_access_key_id: "Your OSS access key id"
     oss_access_key_secret: "Your OSS access key secret"
     oss_region: "The region code of your OSS bucket, e.g. \"oss-cn-shenzhen\""
+    oss_upload_region: "The region code of your OSS bucket for upload, e.g. \"oss-cn-shenzhen-internal\". If left empty, oss_region will be used."
     oss_upload_bucket: "The name of the OSS bucket which will be used to store your uploads."

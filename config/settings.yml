@@ -6,4 +6,5 @@ plugins:
   oss_access_key_secret: ''
   oss_cdn_url: ''
   oss_region: oss-cn-shenzhen
+  oss_upload_region: ''
   oss_upload_bucket: discourseprod

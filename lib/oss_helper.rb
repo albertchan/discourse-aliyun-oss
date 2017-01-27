@@ -54,8 +54,10 @@ class OssHelper
   end
 
   def default_oss_options
+    upload_region = SiteSetting.oss_upload_region.to_s.empty? ? SiteSetting.oss_region : SiteSetting.oss_upload_region
+
     opts = {}
-    opts[:endpoint] = get_endpoint(SiteSetting.oss_region)
+    opts[:endpoint] = get_endpoint(upload_region)
     opts[:access_key_id] = SiteSetting.oss_access_key_id
     opts[:access_key_secret] = SiteSetting.oss_access_key_secret
 

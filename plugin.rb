@@ -3,8 +3,7 @@
 # version: 0.0.1
 # authors: Albert Chan for Emedia Developers
 
-gem 'aliyun-sdk', '0.5.0'
-require "aliyun/oss"
+gem 'aliyun-sdk', '0.5.0', {require_name: 'aliyun/oss'}
 require_dependency "file_helper"
 require_dependency "file_store/base_store.rb"
 

@@ -12,15 +12,6 @@ before doing anything serious with it!
 
 ```
 hooks:
-  before_bundle_exec:
-    - exec:
-        cd: $home
-        cmd:
-          - echo "gem 'aliyun-sdk', require:'aliyun/oss'" >> Gemfile
-          - su discourse -c 'bundle install --no-deployment --verbose --without test --without development --path vendor/bundle'
-
-  ...
-
   after_code:
     - exec:
         cd: $home/plugins
